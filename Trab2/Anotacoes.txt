@@ -1,0 +1,36 @@
+-Complexidade de todas as operacoes = O(logL), em que L eh o numero de linhas da entrada
+-Saidas: "mostrarCabecalhos", "naoMostrarCabecalhos"(qualquer outra coisa), "ultimaColuna" e "compacta"
+-Comentarios na entrada: se comeca com // significa q eh um comentario de entrada, ignora-la(leitura com getline)
+-Funcoes: 
+-----------------------
+IA-> seguido do ticker, qtd, precoCompra, dividendo. Insere acao na carteira(obrigatoriamente nao eh copia de outra na CARTEIRA) eh cadastrada no final
+-----------------------
+AC-> seguido do tipo de alteracao e ticker (especificado pelo ticker) de uma acao da CARTEIRA
+REMOVE
+QUANTIDADE
+DIVIDENDO; se refere ao dividendo cadastrado em IA, nao a consulta da funcao "dividendo" que eh referente ao historico de cotacoes, ou seja altera o fator do objeto da classe carteira.
+VALOR
+ex:"AC DIVIDENDO bbas3 400.75"
+-----------------------
+IC-> seguido de data ticker e valor para cadastrar uma cotacao(se ja existir essa cotacao naquele dia deve ser alterado o valor) ou seja a ultima sera a efetivamente cadastrada
+-----------------------
+ID-> seguido de data ticker e valor, se refere a uma cotacao de determinada acao em uma data, se for repetida se somam
+-----------------------
+DIV-> imprime as acoes da carteira e seus respectivos dividendos somados em um intervalo de datas e sua soma total pode ter complexidade O(c*(Ddiv + log(D))), em que c eh o numero de acoes da carteira e Ddiv é a quantidade média de dias do intervalo e D é o número total de dividendos na entrada
+Independe da funcao de historico de cotacoes ja que agora pode se cadastrar um dividendo separadamente
+-----------------------
+ORD-> seguido do criterio de ordenacao, a quantidade K de elementos a se ordenar e uma data. Essa funcao ordena as acoes da carteira e imprime os K elementos ordenados, de acordo com cada criterio
+Criterios:
+ORIG; ordem original cadastrada na carteira
+TICK 
+DIV
+VALOR
+QUANT
+Complexidade máxima deverá ser: O(k log N), onde N é o número de cotações cadastradas no programa. 
+-----------------------
+Armazenamento:
+
+Carteira; sera uma lista duplamente encadeada por MyList2, deve utilizar map para implementar os indices com MyMap
+Deve-se alterar o MyMap para permitir consultas do tipo "primeiro >="
+
+O uso de maps faz com que determinada acao tenha em si um indices apontando para outras listas que contem o ticker ordenado, outro indice apontando para uma lista de quantidade que irao formando os objetos das classes. Facilitando a impressao ordenada das acoes.

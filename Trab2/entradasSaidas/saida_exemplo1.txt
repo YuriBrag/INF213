@@ -1,0 +1,70 @@
+Data: 12/01/2023
+Ticker Quantidade        Compra     Dividendo         Valor
+bbas3         100       3000.41        200.12       3015.00
+cple11        200       1200.57        150.15       1234.00
+bbse3         150       1950.31        300.75       3025.50
+Valor total da carteira:                            7274.50
+
+Data: 13/01/2023
+Ticker Quantidade        Compra     Dividendo         Valor
+bbas3         100       3000.41        200.12       3115.00
+cple11        200       1200.57        150.15       1434.00
+bbse3         150       1950.31        300.75       3175.50
+Valor total da carteira:                            7724.50
+
+Data: 14/01/2023
+Ticker Quantidade        Compra     Dividendo         Valor
+bbas3         100       3000.41        200.12       2915.00
+cple11        200       1200.57        150.15       1034.00
+bbse3         150       1950.31        300.75       2875.50
+Valor total da carteira:                            6824.50
+
+Data: 17/01/2023
+Ticker Quantidade        Compra     Dividendo         Valor
+bbas3         100       3000.41        200.12       2515.00
+cple11        200       1200.57        150.15        234.00
+bbse3         150       1950.31        300.75       2275.50
+Valor total da carteira:                            5024.50
+
+Dividendos no intervalo: 14/01/2023 a 14/01/2023
+Ticker Quantidade        Compra     Dividendo    Div.inter.
+bbas3         100       3000.41        200.12        210.00
+cple11        200       1200.57        150.15          0.00
+bbse3         150       1950.31        300.75          0.00
+Total de dividendos:                                 210.00
+
+Dividendos no intervalo: 12/01/2023 a 12/01/2023
+Ticker Quantidade        Compra     Dividendo    Div.inter.
+bbas3         100       3000.41        200.12          0.00
+cple11        200       1200.57        150.15        450.00
+bbse3         150       1950.31        300.75          0.00
+Total de dividendos:                                 450.00
+
+Data: 12/01/2023
+Ticker Quantidade        Compra     Dividendo         Valor
+bbas3         100       3000.41        200.12       3015.00
+bbse3         150       1950.31        300.75       3025.50
+cple11        200       1200.57        150.15       1234.00
+Valor total da carteira:                            7274.50
+
+Data: 12/01/2023
+Ticker Quantidade        Compra     Dividendo         Valor
+cple11        200       1200.57        150.15       1234.00
+bbas3         100       3000.41        200.12       3015.00
+bbse3         150       1950.31        300.75       3025.50
+Valor total da carteira:                            7274.50
+
+Data: 12/01/2023
+Ticker Quantidade        Compra     Dividendo         Valor
+cple11        200       1200.57        150.15       1234.00
+bbse3         150       1950.31        300.75       3025.50
+bbas3         100       3000.41        200.12       3015.00
+Valor total da carteira:                            7274.50
+
+Data: 12/01/2023
+Ticker Quantidade        Compra     Dividendo         Valor
+bbas3         100       3000.41        200.12       3015.00
+bbse3         150       1950.31        300.75       3025.50
+cple11        200       1200.57        150.15       1234.00
+Valor total da carteira:                            7274.50
+

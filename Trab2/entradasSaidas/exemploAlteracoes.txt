@@ -1,0 +1,118 @@
+mostrarCabecalhos
+//inserindo cotacoes e dividendos (aqui esta ordenado apenas para facilitar a visualizacao -- na entrada nao ha garantia de ordenacao)
+IC 12/01/2023 bbas3 30.15
+IC 12/01/2023 bbse3 20.17
+IC 12/01/2023 cple11 6.17
+IC 12/01/2023 itsa4 11.12
+IC 12/01/2023 movi3 10.50
+IC 13/01/2023 bbas3 31.15
+IC 13/01/2023 bbse3 21.17
+IC 13/01/2023 cple11 7.17
+IC 13/01/2023 itsa4 12.12
+IC 13/01/2023 movi3 11.50
+IC 14/01/2023 bbas3 29.15
+IC 14/01/2023 bbse3 19.17
+IC 14/01/2023 cple11 5.17
+IC 14/01/2023 itsa4 10.12
+IC 14/01/2023 movi3 9.50
+IC 17/01/2023 bbas3 25.15
+IC 17/01/2023 bbse3 15.17
+IC 17/01/2023 cple11 1.17
+IC 17/01/2023 itsa4 6.12
+IC 17/01/2023 movi3 5.50
+
+ID 12/01/2023 cple11 2.25
+ID 14/01/2023 cple11 0.02
+ID 17/01/2023 bbas3 2.05
+ID 17/01/2023 bbse3 3.14
+
+
+IA bbas3 300 3000.41 200.12
+IA cple11 400 1200.57 150.15
+IA bbse3 200 1950.31 300.75
+
+//Ordenando com base em varios criterios
+ORD ORIG 3 14/01/2023
+ORD TICK 3 14/01/2023
+ORD DIV 3 14/01/2023
+ORD VALOR 3 14/01/2023
+ORD QUANT 3 14/01/2023
+//Saida esperada:
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// bbas3         300       3000.41        200.12       8745.00
+// cple11        400       1200.57        150.15       2068.00
+// bbse3         200       1950.31        300.75       3834.00
+// Valor total da carteira:                           14647.00
+
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// bbas3         300       3000.41        200.12       8745.00
+// bbse3         200       1950.31        300.75       3834.00
+// cple11        400       1200.57        150.15       2068.00
+// Valor total da carteira:                           14647.00
+
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// cple11        400       1200.57        150.15       2068.00
+// bbas3         300       3000.41        200.12       8745.00
+// bbse3         200       1950.31        300.75       3834.00
+// Valor total da carteira:                           14647.00
+
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// cple11        400       1200.57        150.15       2068.00
+// bbse3         200       1950.31        300.75       3834.00
+// bbas3         300       3000.41        200.12       8745.00
+// Valor total da carteira:                           14647.00
+
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// bbse3         200       1950.31        300.75       3834.00
+// bbas3         300       3000.41        200.12       8745.00
+// cple11        400       1200.57        150.15       2068.00
+// Valor total da carteira:                           14647.00
+
+//alterando dividendo...
+AC DIVIDENDO bbas3 400.75
+ORD DIV 3 14/01/2023
+//Saida esperada:
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// cple11        400       1200.57        150.15       2068.00
+// bbse3         200       1950.31        300.75       3834.00
+// bbas3         300       3000.41        400.75       8745.00
+// Valor total da carteira:                           14647.00
+
+//alterando valor...
+AC VALOR bbse3 9000.00
+ORD VALOR 3 14/01/2023
+//Saida esperada:
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// cple11        400       1200.57        150.15       2068.00
+// bbas3         300       3000.41        400.75       8745.00
+// bbse3         200       9000.00        300.75       3834.00
+// Valor total da carteira:                           14647.00
+
+//alterando valor...
+AC QUANTIDADE cple11 100
+ORD QUANT 3 14/01/2023
+//Saida esperada:
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// cple11        100       1200.57        150.15        517.00
+// bbse3         200       9000.00        300.75       3834.00
+// bbas3         300       3000.41        400.75       8745.00
+// Valor total da carteira:                           13096.00
+
+//removendo acao...
+AC REMOVE bbse3
+ORD QUANT 2 14/01/2023
+//Saida esperada:
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// cple11        100       1200.57        150.15        517.00
+// bbas3         300       3000.41        400.75       8745.00
+// Valor total da carteira:                            9262.00
+

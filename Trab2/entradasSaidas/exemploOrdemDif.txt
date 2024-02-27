@@ -1,0 +1,106 @@
+mostrarCabecalhos
+IC 17/01/2023 bbse3 15.17
+IC 17/01/2023 movi3 5.50
+IC 17/01/2023 itsa4 6.12
+IC 17/01/2023 bbas3 25.15
+IC 12/01/2023 bbas3 30.15
+IC 12/01/2023 itsa4 11.12
+IC 13/01/2023 itsa4 12.12
+IC 13/01/2023 bbse3 21.17
+IC 12/01/2023 movi3 10.50
+IC 12/01/2023 bbse3 20.17
+IC 13/01/2023 bbas3 31.15
+IC 12/01/2023 cple11 6.17
+IC 17/01/2023 cple11 1.17
+IC 13/01/2023 cple11 7.17
+IC 13/01/2023 movi3 11.50
+
+//Inserindo duas cotacoes no dia 14
+//
+IC 14/01/2023 itsa4 10.12
+IC 14/01/2023 cple11 5.17
+
+//Cadastrando dividendos
+ID 12/01/2023 cple11 2.25
+ID 17/01/2023 bbas3 2.05
+ID 17/01/2023 bbse3 3.14
+ID 14/01/2023 cple11 0.02
+
+//inserindo acoes na carteira -- note que capi3 nem tem cotacao nem dividendos!
+IA bbas3 100 3000.41 200.12
+IA cple11 200 1200.57 150.15
+IA bbse3 100 1950.31 300.75
+IA capi3 90 10.12 3.14
+
+//imprimindo na ordem de cadastro
+ORD ORIG 3 14/01/2023
+//Saida esperada:
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// bbas3         100       3000.41        200.12       2515.00
+// cple11        200       1200.57        150.15       1034.00
+// bbse3         100       1950.31        300.75       1517.00
+// capi3          90         10.12          3.14          0.00
+// Valor total da carteira:                            5066.00
+
+//Notem que bbas3 (e outras) nem tinham cotacao no dia 14 --> usamos a do proximo dia, que eh dia 17
+
+
+//imprimindo dividendos do dia 14 (apenas cple11 pagou)
+DIV 14/01/2023 14/01/2023
+//Saida esperada:
+// Dividendos no intervalo: 14/01/2023 a 14/01/2023
+// Ticker Quantidade        Compra     Dividendo    Div.inter.
+// bbas3         100       3000.41        200.12          0.00
+// cple11        200       1200.57        150.15          4.00
+// bbse3         100       1950.31        300.75          0.00
+// capi3          90         10.12          3.14          0.00
+// Total de dividendos:                                   4.00
+
+//cadastrando novos dividendos e cotacoes 
+ID 14/01/2023 bbas3 1.05
+ID 14/01/2023 bbas3 1.05
+IC 14/01/2023 bbas3 29.15
+IC 14/01/2023 bbse3 19.17
+IC 14/01/2023 movi3 9.50
+
+//imprimindo denovo. Agora, bbas3 e bbse3 possuem cotacoes no dia 14
+ORD ORIG 3 14/01/2023
+//Saida esperada:
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// bbas3         100       3000.41        200.12       2915.00
+// cple11        200       1200.57        150.15       1034.00
+// bbse3         100       1950.31        300.75       1917.00
+// capi3          90         10.12          3.14          0.00
+// Valor total da carteira:                            5866.00
+
+//Imprimindo dividendo denovo: agora bbas3 pagou 2.10 por acao
+DIV 14/01/2023 14/01/2023
+//Saida esperada:
+// Dividendos no intervalo: 14/01/2023 a 14/01/2023
+// Ticker Quantidade        Compra     Dividendo    Div.inter.
+// bbas3         100       3000.41        200.12        210.00
+// cple11        200       1200.57        150.15          4.00
+// bbse3         100       1950.31        300.75          0.00
+// capi3          90         10.12          3.14          0.00
+// Total de dividendos:                                 214.00
+
+//Adicionando uma acao nova a carteira... (ja tinha algumas cotacoes cadastradas acima, mas a acao nao estava na carteira...)
+IA movi3 50 500.31 100.75
+//inserindo cotacao de bbas3 no dia 14 (ja existia cotacao nesse dia --> ela sera alterada de 29.15 para 30.10)
+IC 14/01/2023 bbas3 30.10
+
+//Imprimindo carteira novamente.
+//Cotacao de bbas3 estara diferente e agora teremos movi3 no final da carteira (cada acao custa 9.50, segundo a cotacao cadastrada acima)
+ORD ORIG 3 14/01/2023
+//Saida esperada:
+// Data: 14/01/2023
+// Ticker Quantidade        Compra     Dividendo         Valor
+// bbas3         100       3000.41        200.12       3010.00
+// cple11        200       1200.57        150.15       1034.00
+// bbse3         100       1950.31        300.75       1917.00
+// capi3          90         10.12          3.14          0.00
+// movi3          50        500.31        100.75        475.00
+// Valor total da carteira:                            6436.00
+

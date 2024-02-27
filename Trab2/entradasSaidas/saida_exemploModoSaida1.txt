@@ -1,0 +1,14 @@
+Data: 12/01/2023
+Ticker Quantidade        Compra     Dividendo         Valor
+bbas3         100       3000.41        200.12       3015.00
+cple11        200       1200.57        150.15       1234.00
+bbse3         100       1950.31        300.75       2017.00
+Valor total da carteira:                            6266.00
+
+Dividendos no intervalo: 14/01/2023 a 14/01/2023
+Ticker Quantidade        Compra     Dividendo    Div.inter.
+bbas3         100       3000.41        200.12        210.00
+cple11        200       1200.57        150.15          0.00
+bbse3         100       1950.31        300.75          0.00
+Total de dividendos:                                 210.00
+
